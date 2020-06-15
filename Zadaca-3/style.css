@@ -1,0 +1,216 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-image: url('slika.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    position: absolute;
+    left: 601px;
+    top: 395px;
+    width: 718px;
+    height: 133px;
+
+    font-family: Playfair Display;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 133px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+p{
+    position: absolute;
+    width: 399px;
+    height: 34px;
+    left: 749px;
+    top: 549px;
+    
+
+    font-family: Arial;
+    font-size: 30px;
+    line-height: 34px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+a{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
+
+    color: #D3CBCF;
+}
+
+
+ul, li {
+  list-style-type: none;
+}
+
+.nav_button {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav_icon {
+  position: relative;
+  margin-top: 35px;
+  transition: all 0.2s;
+  border-radius: 25px;
+}
+
+.nav_icon::before {
+  top: -10px;
+}
+
+.nav_icon::after {
+  top: -20px;
+}
+
+.nav_icon, .nav_icon::before, .nav_icon::after {
+  width: 30px;
+  height: 3px;
+  border-radius: 25px;
+  background-color: white;
+  display: inline-block;
+}
+
+.nav_icon::before, .nav_icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav_background {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  background-color: rgba(56, 59, 55, 0.95);
+  z-index: 1000;
+  transition: all .5s ease-in;
+}
+
+.navigation {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  z-index: 1500;
+  opacity: 0;
+  width: 240px;
+  transition: all .5s ease-in;
+}
+
+.nav_list {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+}
+
+.nav_item {
+  margin: 0 10px;
+  border-bottom: 1px solid #1E201D;
+  font-weight: bold;
+}
+
+.nav_link:link, .nav_link:visited {
+  display: block;
+  font-size: 16px;
+  padding: 10px 20px ;
+  color: #D3CBCF;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav_checkbox {
+  display: none;
+}
+
+.nav_checkbox:checked ~ .nav_background {
+    transform: translateX(-250px);
+  }
+
+.nav_checkbox:checked ~ .navigation{
+  opacity: 1;
+  transform: translateX(-250px);
+}
+
+.nav_checkbox:checked + .nav_button .nav_icon {
+  background-color: transparent;
+}
+
+.nav_checkbox:checked + .nav_button .nav_icon::before {
+  transform: rotate(135deg);
+  top: -10px;
+}
+
+.nav_checkbox:checked + .nav_button .nav_icon::after {
+  transform: rotate(-135deg);
+  top: -10px;
+}
+
+.triangle {
+  transition: all .3s ease-in-out;
+  float: right;
+  margin-right: 15px;
+}
+
+.nav_item:hover > .nav_link > .triangle {
+  transform: rotate(180deg);
+}
+
+.nav_item:hover > .nav_link{
+  cursor: pointer;
+  border-left: 2px solid #85B2FF;
+  background-color: #1E201D;
+}
+
+.submenu_item {
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #1E201D;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.submenu_item:hover {
+  cursor: pointer;
+  border-left: none;
+  background-color: #1E201D;
+}
+
+.aboutUs, .planet {
+  background-color: rgba(30, 32, 29, 0.4);
+  margin: 0 auto;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.submenu_aboutUs:hover > .aboutUs,
+.submenu_planet:hover > .planet{
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}
