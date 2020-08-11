@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <p>Home</p><span>|</span>
+            <p>About</p><span>|</span>
+            <p>Products</p><span>|</span>
+            <p>Services</p><span>|</span>
+            <p>Blog</p><span>|</span>
+            <p>Contacts</p>
+        </div>
+
+        <div class="header-icons">
+            <img src="images/heart.png" alt="heart-icon" class="icon">
+            <img src="images/shopping-cart.png" alt="shopping-cart" class="icon">
+        </div>
+    </header>
+
+    <div class="content-container">
+        <h1>My Profil</h1>
+        <div class="form-container">
+            <p class="form-title">Edit account information</p>
+            <p class="form-subtitle">PERSONAL</p>
+
+            <p class="input-label">First name</p>
+            <input type="text" name="first-name" id="first-name">
+            <p class="input-label">Last name</p>
+            <input type="text" name="last-name" id="last-name">
+            <p class="input-label">Email Address</p>
+            <input type="email" name="email" id="email">
+            <p class="input-label">Phone</p>
+            <input type="tel" name="tel" id="tel">
+
+            <p class="form-subtitle" style="margin-top:40px">LOCATION</p>
+            <p class="input-label">Country</p>
+            <input type="text" name="country" id="country">
+            <p class="input-label">City</p>
+            <input type="text" name="city" id="city">
+        </div>
+
+        <div class="form-container" style="margin-left: 40px;">
+            <p class="form-subtitle" style="margin-top: 150px;">EDUCATION</p>
+            <p class="input-label">Education</p>
+            <input class="second-row-input" type="text" name="education1" id="education1">
+            <input class="second-row-input" type="text" name="education2" id="education2">
+        </div>
+
+        <div class="form-container" style="margin-top: 195px;">
+            <p class="input-label">Finished</p>
+            <input class="third-row-input" type="date" name="date1" id="date1">
+            <input class="third-row-input" type="date" name="date2" id="date2">
+            <button class="save-button">SAVE CHANGES</button>
+        </div>
+        
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
